@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Customized style and js-->
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+
+    <!-- fCC Evaluator -->
+    <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <title>fCC: Survey Form</title>
+</head>
+
+<body>
+    <main class="container">
+        <section class="row">
+            <div class="jumbotron my-3">
+                <h1 class="display-4 text-center" id="title">Record studio survey!</h1>
+                <hr class="mx-3">
+                <p class="text-center text" id="description">
+                    Please take a few minutes to answer this survey about our services!<br>
+                    We really want to know your opinion in order to improve ourselves constantly.
+                </p>
+            </div>
+            <div class="col mx-3">
+                <form id="survey-form" action="" class="mx-5 row">
+                    <div class="form-group col-lg-5 offset-lg-1">
+                        <label id="name-label" class="form-label" for="name">Full Name</label>
+                        <input required class="form-control mb-3" type="text" name="name" id="name"
+                            placeholder="Please write your full name.">
+                    </div>
+                    <div class="form-group col-lg-5">
+                        <label class="form-label" for="birthDate">Birth Date</label>
+                        <input class="form-control mb-3" type="date" name="birthDate" id="birthDate">
+                    </div>
+                    <div class="form-group col-lg-5 offset-lg-1">
+                        <label id="email-label" class="form-label" for="email">Email</label>
+                        <input required class="form-control mb-3" type="email" name="email" id="email"
+                            placeholder="E.g: johndoe@email.com">
+                    </div>
+                    <div class="form-group col-lg-5">
+                        <label id="number-label" class="form-label" for="number">How many people assist?</label>
+                        <input required min="1" max="10" class="form-control mb-3" type="number" name="number"
+                            id="number" placeholder="Specify the number of people that assist to the studio with you">
+                    </div>
+                    <div class="form-group offset-lg-1 col-lg-10">
+                        <label class="form-label" for="dropdown">
+                            Which studio do you assist to?
+                        </label>
+                        <select name="dropdown" id="dropdown" class="form-control mb-3">
+                            <option class="" value="none">
+                                ---- None ----
+                            </option>
+                            <option class="" value="santiago">
+                                Santiago Centro Studio, R.M, Chile
+                            </option>
+                            <option class="" value="providencia">
+                                Providencia Studio, R.M, Chile
+                            </option>
+                            <option class="" value="costanera">
+                                Costanera Studio, R.M, Chile
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group offset-lg-1 col-lg-10">
+                        <p><strong>Would you recommend our services?</strong></p>
+                        <div class="btn-group mb-3" role="group" aria-label="Would you recommend our services?">
+                            <input type="radio" class="btn-check" name="recommendation" id="totally" value="totally"
+                                autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="totally">Totally</label>
+
+                            <input type="radio" class="btn-check" name="recommendation" id="maybe" value="maybe"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary" for="maybe">Maybe</label>
+
+                            <input type="radio" class="btn-check" name="recommendation" id="nope" value="nope"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary" for="nope">Not at all</label>
+                        </div>
+                    </div>
+                    <div class="form-group offset-lg-1 col-lg-10">
+                        <p><strong>How did you know about us?</strong></p>
+                        <div class="btn-group mb-3" role="group" aria-label="How did you know about us?">
+                            <input name="source" value="socialNetwork" type="checkbox" class="btn-check"
+                                id="socialNetwork" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="socialNetwork">Social Networks</label>
+
+                            <input name="source" value="recommendation" type="checkbox" class="btn-check"
+                                id="recommendation" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="recommendation">Recommendation</label>
+
+                            <input name="source" value="influencer" type="checkbox" class="btn-check" id="influencer"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary" for="influencer">Influencer</label>
+                        </div>
+                    </div>
+                    <div class="form-floating offset-lg-1 col-lg-10">
+                        <textarea class="form-control mb-3" placeholder="Leave a comment here" id="comments"
+                            style="height: 100px"></textarea>
+                        <label for="comments">&nbsp;Additional Comments</label>
+                    </div>
+                    <div>
+                        <button id="submit" class="btn btn-primary col-12 offset-lg-1 col-lg-10"
+                            type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
